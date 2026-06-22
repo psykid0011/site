@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fakilefas1 rp</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    position:sticky;
+    top:0;
+    background:#0f172a;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#cbd5e1;
+    max-width:700px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Панель магазина */
+.shop {
+    display: none;
+    padding: 80px 10%;
+}
+
+.shop-panel {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.shop-panel h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.shop-item {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    cursor:pointer;
+}
+
+.shop-item:hover {
+    border-color: #38bdf8;
+    transform: translateY(-5px);
+}
+
+.shop-item h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #38bdf8;
+}
+
+.shop-item p {
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.shop-item span {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.popular {
+    background: #38bdf8;
+    color: #000;
+}
+
+.popular h3,
+.popular span {
+    color: #000;
+}
+
+.shop-info {
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:60px 10%;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.services{
+    padding:80px 10%;
+}
+
+.services h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+.about{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about p{
+    max-width:700px;
+    margin:auto;
+    color:#cbd5e1;
+    font-size:18px;
+}
+
+.contact{
+    padding:80px 10%;
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#94a3b8;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">fakilefas1 rp</div>
+
+    <nav>
+        <a href="#hero">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<section class="hero" id="hero">
+    <h1>fakilefas1 rp — твое превосходство в деталях</h1>
+    <p>Создаём качественные ресурспаки, оптимизации и сервисы для Minecraft‑сообщества.</p>
+
+    <div class="btn">Начать</div>
+</section>
+
+<!-- ПАНЕЛЬ МАГАЗИНА -->
+<section class="shop" id="shop">
+    <div class="shop-panel">
+        <h2>Покупка товара</h2>
+
+        <div class="shop-grid">
+
+            <div class="shop-item" id="item1">
+                <h3>fakilefas1 rp</h3>
+                <p>♾️дней</p>
+                <span>45 RUB</span>
+            </div>
+
+            <div class="shop-item" id="item2">
+                <h3>wexykim rp</h3>
+                <p>♾️дня</p>
+                <span>5 RUB</span>
+            </div>
+
+            <div class="shop-item popular" id="item3">
+                <h3>Популярный</h3>
+                <p>♾️дней</p>
+                <span>30 RUB</span>
+            </div>
+
+            <div class="shop-item" id="item4">
+                <h3>HVH</h3>
+                <p>♾️дней</p>
+                <span>50 RUB</span>
+            </div>
+
+            <div class="shop-item" id="item5">
+                <h3>Optimize pack by fakilefas1</h3>
+                <p>♾️дня</p>
+                <span>20 RUB</span>
+            </div>
+
+        </div>
+
+        <p class="shop-info">Полная защита • Авто‑обновления • Поддержка 24/7</p>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>Наши услуги</h2>
+
+    <div class="grid">
+
+        <div class="service">
+            <h3>Ресурспаки</h3>
+            <p>Уникальные и оптимизированные ресурспаки.</p>
+        </div>
+
+        <div class="service">
+            <h3>Оптимизация</h3>
+            <p>Повышение FPS и улучшение стабильности.</p>
+        </div>
+
+        <div class="service">
+            <h3>Сборки</h3>
+            <p>Готовые решения для серверов и игроков.</p>
+        </div>
+
+        <div class="service">
+            <h3>Поддержка</h3>
+            <p>Помощь и сопровождение 24/7.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>О нас</h2>
+    <p>
+        Мы команда fakilefas1 rp — создаём качественные цифровые продукты, ресурспаки, оптимизации и сервисы для Minecraft‑сообщества.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Связаться с нами</h2>
+    <p>
+        <a href="mailto:pampers228f@gmail.com" style="color:#38bdf8; text-decoration:none; font-weight:bold;">
+            pampers228f@gmail.com
+        </a>
+        / discord fakilefas1
+    </p>
+</section>
+
+<footer>
+    © 2026 fakilefas1 rp. Все права защищены.
+</footer>
+
+<script>
+document.querySelector(".btn").addEventListener("click", () => {
+    document.querySelector(".shop").style.display = "block";
+    window.scrollTo({ top: document.querySelector(".shop").offsetTop, behavior: "smooth" });
+});
+
+// Все товары → переход на FunPay
+const items = ["item1", "item2", "item3", "item4", "item5"];
+
+items.forEach(id => {
+    document.getElementById(id).addEventListener("click", () => {
+        window.location.href = "https://funpay.com/users/18838430/";
+    });
+});
+</script>
+
+</body>
+</html>
